@@ -1,0 +1,35 @@
+name: 'Send Mail'
+description: 'Send an email with optional attachments'
+
+inputs:
+  server_address:
+    description: 'SMTP server address'
+    required: true
+  server_port:
+    description: 'SMTP server port'
+    required: true
+  username:
+    description: 'SMTP username'
+    required: true
+  password:
+    description: 'SMTP password'
+    required: true
+  from:
+    description: 'Sender email address'
+    required: true
+  to:
+    description: 'Recipient email address'
+    required: true
+  subject:
+    description: 'Email subject'
+    required: true
+  body:
+    description: 'Email body'
+    required: true
+  attachments:
+    description: 'Email attachments (comma-separated paths)'
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

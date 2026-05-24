@@ -1,0 +1,15 @@
+{
+  "name": "action-send-mail",
+  "version": "3.0.0",
+  "description": "GitHub Action to send emails with attachments",
+  "main": "send-email.js",
+  "scripts": {
+    "build": "ncc build send-email.js -o dist/index.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  }
+}
